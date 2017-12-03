@@ -1,14 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700italic);
-/*body {
-  background-color: black;  
-}*/
-/*html, body, {
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-}*/
   .flex-container {
     display: -webkit-flex;
     display: flex;  
@@ -47,15 +37,15 @@
     footer {-webkit-order:3;order:3;}
   }
 
-.timer {
-  font-size: 5em;
-  padding: 10px;
-  text-align: center;
-  margin: 0 auto;
-}
+  #time {
+    font-size: 5em;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+  }
 
-#footer {
-  height: 25px; /* the footer's total height */
-  /*position: bottom;*/
-  margin: fixed;
-}
+  #footer {
+    height: 25px; /* the footer's total height */
+    /*position: bottom;*/
+    margin: fixed;
+  }
