@@ -6,5 +6,6 @@ get "/home" do
 end
 
 get "/code" do
-  send_file 'source.html'
+  file = File.open("public/js/main.js", "r")
+  { code: file.read }.to_json
 end
