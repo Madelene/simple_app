@@ -11,5 +11,5 @@ end
 
 get "/code" do
   file = File.open("public/js/main.js", "r")
-  { "code" : file.read.gsub(/\n/,"") }.to_json
+  { code: file.read.gsub(/\n/,"") }.to_json
 end
