@@ -11,7 +11,7 @@ get "/home" do
 end
 
 get "/code" do
-
+  send_file 'source.html'
 # curl http://your-app.herokuapp.com/code
  
 # # …and receive the JSON response:
