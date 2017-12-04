@@ -1,6 +1,10 @@
 require "sinatra"
 require "json"
 
+get "/" do
+  redirect '/home'
+end
+
 get "/home" do 
   send_file 'intro.html'
 end
