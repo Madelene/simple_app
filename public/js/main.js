@@ -16,15 +16,12 @@ window.onload = function () {
   startTimer(threeSeconds, display);
 };
 
-
-$(document).ready(function(){
-  $("section").click(function(){
-    $.ajax({
-      url: "/code", success: function(result){
-      $("#timer").html(result);
-      }
-    });
+ setInterval(function() {
+  $.ajax({
+    url: "/code", 
+    success: function(result){
+    $("#timer").html(result);
+    }
   });
-});
- 
+}, 4000); 
 
