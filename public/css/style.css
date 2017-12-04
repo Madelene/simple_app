@@ -46,6 +46,6 @@
 
   #footer {
     height: 25px; /* the footer's total height */
-    /*position: bottom;*/
+    position: bottom;
     margin: fixed;
   }
