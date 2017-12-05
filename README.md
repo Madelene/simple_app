@@ -11,7 +11,7 @@ To test the /code endpoint, running the command:
 
 { "code": "the source code of your app" }
  
-To test the /home endpoint, put `https://glacial-reaches-96551.herokuapp.com/home` in the browser to see:
+To test the /home endpoint, put `https://glacial-reaches-96551.herokuapp.com` in the browser to see:
 * a home page with an introduction
 * a main section which at first is blank
 * a numeric count down from 3 to 1 in the middle of the main section
