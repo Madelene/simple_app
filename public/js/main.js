@@ -16,13 +16,17 @@ window.onload = function () {
   startTimer(threeSeconds, display);
 };
 
+var stopFunction = false
+
  setInterval(function() {
+  if (!stopFunction) {
   $.ajax({
     url: "/code", 
     success: function(result){
     $("#timer").html(result);
+    stopFunction = true
     }
-  });
+  });}
 }, 4000); 
 
 
