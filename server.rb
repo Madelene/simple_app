@@ -3,6 +3,10 @@ require 'find'
 require 'json'
 require 'sinatra'
 
+get "/" do
+  redirect '/home'
+end
+
 get '/home' do
   send_file File.join('public', 'intro.html')
 end
