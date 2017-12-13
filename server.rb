@@ -1,15 +1,20 @@
-require "sinatra"
-require "json"
+require 'coderay'
+require 'find'
+require 'json'
+require 'sinatra'
 
-get "/" do
-  redirect '/home'
+get '/home' do
+  send_file File.join('public', 'intro.html')
 end
 
-get "/home" do 
-  send_file 'intro.html'
-end
+get '/code' do
+  content_type :json
 
-get "/code" do
-  file = File.open("public/js/main.js", "r")
-  { code: file.read.gsub(/\n/,"") }.to_json
+  files = []
+  Dir.glob('{*,public/*,spec/*}').each do |entry|
+    next if File.directory?(entry)
+    files.push({ name: entry, code: CodeRay.scan_file(entry).div(:line_numbers => :table) })
+  end
+
+  files.to_json
 end
