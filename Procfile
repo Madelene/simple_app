@@ -1,1 +1,1 @@
-web: ruby server.rb -p $PORT
+web: rackup -s puma -p $PORT
