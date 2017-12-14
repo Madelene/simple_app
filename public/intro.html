@@ -12,8 +12,8 @@
     .code { width: 100% }
     </style>
   </head>
-  <body data-spy="scroll" data-target=".kipu-nav">
-    <nav class="navbar navbar-inverse navbar-fixed-top kipu-nav">
+  <body data-spy="scroll">
+    <nav class="navbar navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navbar" aria-expanded="false">
@@ -31,28 +31,29 @@
     <div class="container anchor">
       <div class="row">
         <div class="col-sm-3 hidden-xs">
-          <nav class="kipu-nav" data-spy="affix">
+          <nav data-spy="affix">
             <ul class="nav nav-pills nav-stacked"></ul>
           </nav>
         </div>
         <div class="col-xs-12 col-sm-9">
-          <div class="jumbotron">
-            <h3>Maddie's Revised Simple App</h3>
-            <p>This app has two endpoints:</p>
+          <div class="jumbotron" style="color:#3c085a;background-color:#ccb3da;">
+            <h2>Maddie's Revised App</h2>
+            <p>This app contains two endpoints:</p>
             <ul>
-              <li><code>/home</code> makes an ajax call to <code>/code</code> after a short countdown, parses the response, and updates the UI appropriately</li>
-              <li><code>/code</code> will iterate through the directory structure and output its contents, with proper formatting and syntax highlighting</li>
+              <li><code>/home</code> makes an ajax call to <code>/code</code> after a 3 second countdown, parses the response, and updates the UI appropriately</li>
+              <li><code>/code</code> iterates through the directory and outputs its contents, with proper formatting and syntax highlighting</li>
             </ul>
-            <p><a class="btn btn-primary btn-lg" href="https://github.com/Madelene/simple_app" role="button" target="_blank">View Source</a></p>
+            <p><a style="background-color:#3c085a;" class="btn btn-primary" href="https://github.com/Madelene/simple_app" role="button" target="_blank">View my GitHub Repo</a></p>
           </div>
           <div class="content">
-            <h2><div class="countdown text-center" data-count="3">Ready</div></h2>
+            <h1 style="color:#3c085a;"><div class="countdown text-center" data-count="3">Let the Countdown Begin!</div></h1>
           </div>
         </div>
       </div>
     </div>
     <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
     <script>
       var $countdown, count, timer;
 
@@ -80,7 +81,7 @@
 
           for (var index in data) {
             var ref = data[index];
-            navs += '<li><a href="#anchor_' + index + '">' + ref.name + '</li>';
+            navs += '<li><a style="color:#3c085a;" href="#anchor_' + index + '">' + ref.name + '</li>';
             panels += '<div id="anchor_' + index + '" class="anchor">';
             panels += '<div class="panel panel-default">';
             panels += '<div class="panel-heading"><h3 class="panel-title">' + ref.name + '</h3></div>';
@@ -102,5 +103,6 @@
         }, 'json');
       }
     </script>
+
   </body>
 </html>
